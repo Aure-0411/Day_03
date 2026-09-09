@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+p = "abcdefghij"
+
+step1 = p[::-2]        # "jhfdb"
+step2 = step1[:5]      # "jhfdb"
+step3 = step2[::-1]    # "bdfhj"
+step4 = step3[3:]      # "hj"
+
+print(step4)
