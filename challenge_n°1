@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+text = "thE Cat's tactic wAS tO surpRISE thE mIce iN tHE gArdeN"
+text = text.lower()
+
+cat = "cat"
+garden = "garden"
+mice = "mice"
+
+count = 0
+count += text.count(cat) + text.count(cat[::-1])
+count += text.count(garden) + text.count(garden[::-1])
+count += text.count(mice) + text.count(mice[::-1])
+
+print(count)
