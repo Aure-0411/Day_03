@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+text = input("Entre un texte : ")
+text = text.lower()
+
+frequency = {}
+for letter in text:
+    if letter.isalpha():
+        if letter in frequency:
+            frequency[letter] += 1
+        else:
+            frequency[letter] = 1
+
+if any(char in text for char in "éèàçùê"):
+    language = "French"
+elif any(char in text for char in "ñ"):
+    language = "Spanish"
+elif any(char in text for char in "äöüß"):
+    language = "German"
+else:
+    language = "English"
+
+print("Langue détectée :", language)
